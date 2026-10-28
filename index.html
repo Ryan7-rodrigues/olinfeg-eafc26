@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073b2a">
+  <meta name="description" content="Confira as informações, datas e regulamento do torneio de EA SPORTS FC 26 da OLINFEG — Câmpus Inhumas.">
+  <title>OLINFEG 2026 | Câmpus Inhumas</title>
+  <style>
+    :root {
+      --green: #08783e;
+      --green-dark: #073b2a;
+      --green-light: #dff5e5;
+      --red: #d92732;
+      --blue: #082e5b;
+      --ink: #172033;
+      --muted: #5e6878;
+      --paper: #f5f8f5;
+      --white: #fff;
+      --line: #e0e7e2;
+      --shadow: 0 14px 35px rgba(7, 59, 42, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: var(--green-dark);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: .9rem;
+      letter-spacing: .02em;
+    }
+    header {
+      background: linear-gradient(125deg, #063b29 0%, #08783e 68%, #0d914d 100%);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+    .nav {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .brand { font-weight: 900; letter-spacing: .04em; font-size: 1.12rem; }
+    .brand span { color: #b9f36b; }
+    .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 650; font-size: .93rem; }
+    .nav-links a:hover { text-decoration: underline; text-underline-offset: 5px; }
+    .hero {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+      padding: 48px 0 68px;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 42px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.1);
+      border-radius: 999px; padding: 7px 13px;
+      font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
+    }
+    h1 { margin: 18px 0 14px; font-size: clamp(2.6rem, 6vw, 5.2rem); line-height: .98; letter-spacing: -.055em; }
+    h1 .fc { color: #b9f36b; }
+    .hero p { max-width: 570px; color: #e6f7eb; font-size: 1.08rem; margin: 0 0 24px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+      border: 0; border-radius: 12px; padding: 13px 19px;
+      font-weight: 800; text-decoration: none; cursor: pointer; transition: transform .18s, filter .18s;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .btn-primary { color: #102414; background: #b9f36b; box-shadow: 0 8px 22px #001c1255; }
+    .btn-outline { color: white; border: 1px solid #ffffff8a; background: #ffffff12; }
+    .cover-wrap { position: relative; }
+    .cover-wrap::before {
+      content: ""; position: absolute; inset: 18px -12px -12px 18px;
+      border: 2px solid #b9f36b; border-radius: 22px; transform: rotate(2deg);
+    }
+    .cover { position: relative; display: block; width: 100%; aspect-ratio: 1.58; object-fit: cover; border-radius: 20px; box-shadow: 0 22px 50px #001b1280; }
+    main { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    .facts {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+      margin-top: -27px; position: relative; z-index: 2;
+    }
+    .fact { background: white; padding: 20px; border-radius: 16px; box-shadow: var(--shadow); border: 1px solid #e9efea; }
+    .fact .icon { font-size: 1.35rem; }
+    .fact strong { display: block; margin: 6px 0 2px; color: var(--green-dark); font-size: 1.04rem; }
+    .fact span { color: var(--muted); font-size: .92rem; }
+    section { padding: 66px 0 0; scroll-margin-top: 24px; }
+    .section-heading { max-width: 720px; margin-bottom: 25px; }
+    .kicker { color: var(--green); font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; }
+    h2 { margin: 5px 0 8px; color: var(--blue); font-size: clamp(1.8rem, 4vw, 2.55rem); letter-spacing: -.035em; line-height: 1.12; }
+    .section-heading p { margin: 0; color: var(--muted); }
+    .signup {
+      display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px;
+      background: linear-gradient(120deg, #082e5b, #0a4970); color: white;
+      padding: 30px; border-radius: 20px; box-shadow: var(--shadow);
+    }
+    .signup h3 { margin: 0 0 6px; font-size: 1.45rem; }
+    .signup p { color: #dceaf6; margin: 0; }
+    .signup .btn { background: #e63842; color: white; white-space: nowrap; }
+    .note { font-size: .84rem; color: var(--muted); margin-top: 12px; }
+    .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .mini-card { padding: 22px; background: white; border: 1px solid var(--line); border-radius: 16px; }
+    .mini-card .number { display: inline-grid; place-items: center; width: 38px; height: 38px; background: var(--green-light); color: var(--green-dark); border-radius: 11px; font-weight: 900; }
+    .mini-card h3 { margin: 13px 0 5px; color: var(--blue); }
+    .mini-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    details { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 0 18px; }
+    details[open] { border-color: #9ac9a9; }
+    summary { cursor: pointer; list-style: none; padding: 18px 28px 18px 0; font-weight: 800; color: var(--blue); position: relative; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 0; top: 14px; color: var(--green); font-size: 1.5rem; }
+    details[open] summary::after { content: "−"; }
+    details ul { margin: 0; padding: 0 0 18px 20px; color: var(--muted); }
+    details li { padding: 3px 0; }
+    .poster-section { display: grid; grid-template-columns: .75fr 1.25fr; align-items: center; gap: 28px; }
+    .poster-section img { width: 100%; max-height: 510px; object-fit: contain; object-position: center; background: white; border-radius: 16px; box-shadow: var(--shadow); }
+    .poster-copy { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 27px; }
+    .poster-copy h3 { margin-top: 0; color: var(--blue); }
+    .poster-copy p { color: var(--muted); }
+    .poster-copy .btn { background: var(--green); color: white; }
+    footer { margin-top: 70px; background: #062b22; color: #e5f5e9; padding: 28px 20px; text-align: center; }
+    footer strong { color: #b9f36b; }
+    footer p { margin: 5px 0; font-size: .9rem; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 13px; }
+      .hero { grid-template-columns: 1fr; padding: 35px 0 55px; gap: 28px; }
+      .cover-wrap { max-width: 560px; }
+      .facts { grid-template-columns: 1fr; margin-top: -20px; }
+      .format-grid { grid-template-columns: 1fr; }
+      .rules { grid-template-columns: 1fr; }
+      .signup { grid-template-columns: 1fr; padding: 24px; }
+      .signup .btn { width: 100%; }
+      .poster-section { grid-template-columns: 1fr; }
+      .poster-section img { max-height: 620px; }
+      section { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">OLINFEG • Câmpus Inhumas • 10, 11 e 14 de dezembro</div>
+  <header>
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="brand">OLINFEG <span>FC 26</span></div>
+      <div class="nav-links">
+        <a href="#informacoes">Informações</a>
+        <a href="#formato">Formato</a>
+        <a href="#regulamento">Regulamento</a>
+        <a href="#inscricao">Inscrição</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">🎮 Torneio de EA SPORTS FC 26</div>
+        <h1>Participe do torneio de EA FC 26 da OLINFEG.<br></h1>
+        <p>Prepare a torcida, escolha seu time e entre em campo no torneio de EA FC 26 da OLINFEG. Competição, respeito e diversão durante os jogos internos do IFG — Câmpus Inhumas.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#inscricao">⚽ Quero me inscrever</a>
+          <a class="btn btn-outline" href="#regulamento">Ler regulamento ↓</a>
+        </div>
+      </div>
+      <div class="cover-wrap">
+        <img class="cover" src="imgs/eafc26-cover.png" alt="Capa de EA SPORTS FC 26">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="facts" id="informacoes">
+      <div class="fact"><div class="icon">📅</div><strong>10, 11 e 14 de dezembro</strong><span>Datas do torneio</span></div>
+      <div class="fact"><div class="icon">📍</div><strong>Mini Auditório</strong><span>IFG — Câmpus Inhumas</span></div>
+      <div class="fact"><div class="icon">⏰</div><strong>12h30 às 14h</strong><span>Durante os intervalos de almoço</span></div>
+    </div>
+
+    <section id="inscricao">
+      <div class="section-heading">
+        <div class="kicker">Participe</div>
+        <h2>Seu lugar começa com a inscrição</h2>
+        <p>A participação é individual. Preencha o formulário com seu nome e sua turma. A previsão inicial é de 32 jogadores, com possibilidade de ajuste conforme o total de inscritos.</p>
+      </div>
+      <div class="signup">
+        <div>
+          <h3>Pronto para entrar em campo?</h3>
+          <p>Inscreva-se pelo formulário oficial e acompanhe as orientações da organização.</p>
+        </div>
+        <!-- TROQUE o link abaixo pelo endereço do seu Google Forms -->
+        <a class="btn" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer">Fazer inscrição ↗</a>
+      </div>
+    </section>
+
+    <section id="formato">
+      <div class="section-heading">
+        <div class="kicker">Como vai funcionar</div>
+        <h2>Formato do campeonato</h2>
+        <p>Confrontos eliminatórios definidos por sorteio, em um chaveamento adaptado ao número final de participantes.</p>
+      </div>
+      <div class="format-grid">
+        <article class="mini-card"><span class="number">01</span><h3>Eliminatória</h3><p>O vencedor de cada confronto avança. As fases previstas são 16 avos, oitavas, quartas, semifinais e final, conforme o número de inscritos.</p></article>
+        <article class="mini-card"><span class="number">02</span><h3>Seu time, sua escolha</h3><p>Cada jogador escolhe livremente seu clube. Os dois participantes do mesmo confronto não podem usar o mesmo time. Os times especiais como all-stars entre outros não serão permitidos.</p></article>
+        <article class="mini-card"><span class="number">03</span><h3>Empatou? Pênaltis!</h3><p>Se a partida terminar empatada, o vencedor será decidido em disputa de pênaltis conforme as regras do próprio jogo.</p></article>
+      </div>
+    </section>
+
+    <section id="regulamento">
+      <div class="section-heading">
+        <div class="kicker">Leia antes de jogar</div>
+        <h2>Regulamento oficial</h2>
+        <p>Abra cada tópico para consultar as regras do torneio.</p>
+      </div>
+      <div class="rules">
+        <details open>
+          <summary>1. Inscrições</summary>
+          <ul>
+            <li>A participação será individual, com apenas um jogador por inscrição.</li>
+            <li>O número inicial previsto é de 32 participantes, podendo aumentar ou diminuir conforme a quantidade de inscritos.</li>
+            <li>Cada participante deverá informar seu nome e sua turma no momento da inscrição.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>2. Sorteio e chaveamento</summary>
+          <ul>
+            <li>O campeonato será disputado em formato eliminatório, semelhante ao da Copa do Mundo.</li>
+            <li>As fases serão organizadas em 16 avos de final, oitavas de final, quartas de final, semifinais e final, conforme o número de participantes.</li>
+            <li>Os confrontos serão definidos por sorteio.</li>
+            <li>Se o número de inscritos for diferente de 32, o chaveamento será adaptado, podendo haver jogadores classificados diretamente para fases posteriores.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>3. Duração das partidas</summary>
+          <ul>
+            <li>Até as quartas de final: partidas com duração de 6 minutos no total.</li>
+            <li>Semifinais: 5 minutos por tempo.</li>
+            <li>Final: 10 minutos por tempo.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>4. Escolha dos times</summary>
+          <ul>
+            <li>Cada jogador poderá escolher livremente o time com o qual deseja jogar.</li>
+            <li>Não será permitido que os dois jogadores utilizem o mesmo time no mesmo confronto.</li>
+            <li>Se os dois escolherem o mesmo time, será realizado um sorteio para definir quem poderá mantê-lo. O outro jogador deverá escolher um time diferente.</li>
+            <li>Times especiais, como os all-stars, não serão permitidos.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>5. Configuração dos controles</summary>
+          <ul>
+            <li>Cada participante poderá utilizar o esquema de controles de sua preferência.</li>
+            <li>Será permitido alterar os comandos, como escolher o botão de chute entre quadrado, bolinha ou outro comando disponível.</li>
+            <li>As alterações deverão ser feitas antes do início da partida.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>6. Critérios de desempate</summary>
+          <ul>
+            <li>Se a partida terminar empatada, o vencedor será definido em uma disputa de pênaltis.</li>
+            <li>A disputa será realizada conforme as regras do próprio jogo.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>7. Conduta dos participantes</summary>
+          <ul>
+            <li>Todos deverão respeitar os adversários e as pessoas responsáveis pela organização.</li>
+            <li>Não serão toleradas ofensas, provocações excessivas, agressões ou atitudes antidesportivas.</li>
+            <li>Tentativas de trapaça ou interferência indevida na partida poderão resultar em desclassificação.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>8. Regras gerais</summary>
+          <ul>
+            <li>Os jogadores deverão estar presentes no horário estabelecido para seus confrontos.</li>
+            <li>O não comparecimento poderá resultar em derrota por W.O., conforme decisão da organização.</li>
+            <li>As partidas deverão seguir o chaveamento definido.</li>
+            <li>Situações não previstas neste regulamento serão resolvidas pela organização do campeonato.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section class="poster-section" aria-label="OLINFEG">
+      <img src="imgs/poster_fc26olinfeg.png" alt="Cartaz da OLINFEG — Câmpus Inhumas">
+      <div class="poster-copy">
+        <div class="kicker">Esporte • Respeito • Amizade</div>
+        <h2>Mais que jogos, grandes conexões!</h2>
+        <p>O torneio de EA FC 26 faz parte da OLINFEG, os jogos internos do IFG — Câmpus Inhumas. Venha competir, torcer e fortalecer a comunidade do câmpus.</p>
+        <h3>📌 Anote aí</h3>
+        <p><strong>Datas:</strong> 10, 11 e 14 de dezembro<br><strong>Local:</strong> Mini Auditório<br><strong>Horário:</strong> intervalo de almoço, das 12h30 às 14h</p>
+        <a class="btn" href="#inscricao">Ir para inscrição ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>OLINFEG FC 26 • IFG — Câmpus Inhumas</strong>
+    <p>Competição com respeito. Diversão em cada partida.</p>
+    <p>Datas e horários sujeitos às orientações oficiais da organização.</p>
+    <p>Desenvolvedores: Murilo Mariano, Ryan Rodrigues e Nicolas de Brito</p>
+  </footer>
+</body>
+</html>
